@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Quiz Maker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Online Quiz Maker</h1>
+      <p>Create quizzes, challenge others, and get instant feedback.</p>
+    </div>
+    <nav class="top-nav">
+      <button class="nav-btn" data-view="homeView">Home</button>
+      <button class="nav-btn" data-view="createView">Create Quiz</button>
+      <button class="nav-btn" data-view="listView">Take Quiz</button>
+      <a class="nav-link" href="login.html">Login</a>
+      <a class="nav-link" href="signup.html">Sign Up</a>
+    </nav>
+    <div class="auth-state" id="authState"></div>
+  </header>
+
+  <main>
+    <section id="homeView" class="view active">
+      <div class="panel hero">
+        <h2>Welcome</h2>
+        <p>Build your own multiple-choice quizzes and let others attempt them. Track scores instantly with detailed results.</p>
+        <div class="study-tags">
+          <span>Math</span>
+          <span>Science</span>
+          <span>History</span>
+          <span>English</span>
+        </div>
+        <div class="hero-actions">
+          <button class="primary" data-view="createView">Start Creating</button>
+          <button class="secondary" data-view="listView">Browse Quizzes</button>
+        </div>
+        <div class="auth-cta">
+          <a href="signup.html" class="primary cta-link">Create Account</a>
+          <a href="login.html" class="secondary cta-link">Login to Continue</a>
+        </div>
+      </div>
+      <p class="status" id="homeStatus"></p>
+    </section>
+
+    <section id="createView" class="view">
+      <div class="panel">
+        <h2>Create a Quiz</h2>
+        <form id="quizForm" class="stack-form">
+          <label>
+            Quiz Title
+            <input type="text" id="quizTitle" required />
+          </label>
+          <label>
+            Short Description
+            <textarea id="quizDescription" rows="2" required></textarea>
+          </label>
+
+          <div id="questionBlocks" class="question-blocks"></div>
+
+          <div class="create-actions">
+            <button type="button" id="addQuestionBtn" class="secondary">Add Question</button>
+            <button type="submit" class="primary">Save Quiz</button>
+          </div>
+        </form>
+        <p class="status" id="createStatus"></p>
+      </div>
+    </section>
+
+    <section id="listView" class="view">
+      <div class="panel">
+        <h2>Available Quizzes</h2>
+        <div id="quizList" class="quiz-list"></div>
+      </div>
+    </section>
+
+    <section id="takeView" class="view">
+      <div class="panel">
+        <h2 id="takeTitle">Quiz</h2>
+        <p id="progressText"></p>
+
+        <div id="questionArea"></div>
+
+        <div class="take-actions">
+          <button id="submitAnswerBtn" class="primary">Submit Answer</button>
+          <button id="nextQuestionBtn" class="secondary" disabled>Next Question</button>
+        </div>
+
+        <p class="status" id="takeStatus"></p>
+      </div>
+    </section>
+
+    <section id="resultView" class="view">
+      <div class="panel">
+        <h2>Quiz Results</h2>
+        <p id="scoreText" class="score"></p>
+        <div id="resultBreakdown"></div>
+        <button class="primary" data-view="listView">Take Another Quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

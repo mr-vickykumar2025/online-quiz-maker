@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Online Quiz Maker</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="animated-bg">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <main class="auth-shell">
+    <section class="auth-card slide-up" data-mode="login">
+      <div class="card-head">
+        <p class="tag">Welcome Back</p>
+        <h1>Login</h1>
+        <p>Continue to create and take quizzes.</p>
+      </div>
+
+      <form id="authForm" class="auth-form">
+        <label>
+          Username
+          <input type="text" id="username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="password" required />
+        </label>
+        <button type="submit" class="glow-btn">Login</button>
+      </form>
+
+      <p id="authStatus" class="auth-status"></p>
+      <p class="swap-text">No account? <a href="signup.html">Create one</a></p>
+      <a href="index.html" class="back-link">Back to Home</a>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
