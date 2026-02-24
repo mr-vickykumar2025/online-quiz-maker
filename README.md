@@ -1,7 +1,9 @@
-📝 Online Quiz Application
+📝
+# Online Quiz Application
 A dynamic, interactive web application designed to challenge users with real-time quizzes, track scores, and provide instant feedback.
 
-🚀 Features
+🚀 
+## Features
 User Authentication: Secure login and registration.
 
 Timed Quizzes: Dynamic countdown timers for each session.
